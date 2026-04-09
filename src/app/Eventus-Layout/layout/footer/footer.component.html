@@ -1,1 +1,26 @@
-<p>footer works!</p>
+<footer class="footer">
+  <div class="footer-top-border"></div>
+  <div class="container">
+    <div class="footer-content">
+      <!-- Logo -->
+      <div class="footer-logo">
+        <img src="/Images/Logo.png" alt="Eventus V logo" class="logo-image" />
+      </div>
+
+      <!-- Social Media Text -->
+      <div class="social-media-text">Our Social Media</div>
+
+      <!-- Social Media Icons -->
+      <div class="social-icons">
+        <a *ngFor="let link of socialLinks" 
+           [href]="link.url" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           [attr.aria-label]="link.name"
+           class="social-icon-link">
+          <i [class]="'bi bi-' + link.icon"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
