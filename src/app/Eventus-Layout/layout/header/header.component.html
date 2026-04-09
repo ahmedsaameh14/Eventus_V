@@ -1,1 +1,29 @@
-<p>header works!</p>
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">
+      <img src="/Images/Logo.png" alt="Eventus V logo" class="header-logo" />
+    </a>
+    <button class="navbar-toggler" type="button" (click)="toggleMenu()" [attr.aria-expanded]="!isCollapsed" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" [class.show]="!isCollapsed" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/story" routerLinkActive="active" (click)="closeMenu()">Success Stories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/gallery" routerLinkActive="active" (click)="closeMenu()">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,11 +1,20 @@
 import { Component } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  isCollapsed = true;
 
+  toggleMenu() {
+    this.isCollapsed = !this.isCollapsed;
+  }
+
+  closeMenu() {
+    this.isCollapsed = true;
+  }
 }

@@ -1,0 +1,82 @@
+.navbar {
+  background: #ffffff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-brand {
+  color: #220404 !important;
+  font-weight: 700;
+  font-size: 1.45rem;
+  letter-spacing: 0.03em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.header-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.navbar-toggler {
+  border: 1px solid rgba(34, 4, 4, 0.15);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2834, 4, 4, 0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.nav-link {
+  position: relative;
+  color: #220404 !important;
+  font-weight: 500;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.nav-link:hover {
+  color: #B71C1C !important;
+  
+}
+
+.nav-link.active {
+  color: #B71C1C !important;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #B71C1C;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.navbar-nav {
+  justify-content: center;
+  flex: 1;
+}
+
+.nav-item {
+  margin: 0 1rem;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: #ffffff;
+    padding: 1rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+
+  .nav-link {
+    padding: 0.5rem 0;
+  }
+}
