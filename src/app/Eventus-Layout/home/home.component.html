@@ -11,25 +11,24 @@
       <span class="hero-title-text">EVENTUS</span>
       <span class="hero-title-letter">V</span>
     </h1>
-  </div>
 
-  <!-- Social Media Sidebar -->
-  <div class="social-sidebar">
-    <a *ngFor="let link of socialLinks; let i = index"
-       [href]="link.url"
-       target="_blank"
-       rel="noopener noreferrer"
-       [attr.aria-label]="link.name"
-       class="social-link"
-       [style.animation-delay.ms]="i * 200">
-      <i [class]="'bi bi-' + link.icon"></i>
-    </a>
+    <div class="social-sidebar">
+      <a *ngFor="let link of socialLinks; let i = index"
+         [href]="link.url"
+         target="_blank"
+         rel="noopener noreferrer"
+         [attr.aria-label]="link.name"
+         class="social-link"
+         [style.animation-delay.ms]="i * 200">
+        <i [class]="'bi bi-' + link.icon"></i>
+      </a>
+    </div>
   </div>
 </section>
 
 <section class="who-we-are-section py-5">
   <div class="container">
-    <div class="row align-items-center g-4">
+    <div class="row align-items-stretch g-4">
       <div class="col-lg-6">
         <div class="who-card p-4 p-md-5">
           <div class="who-label">About Eventus V</div>
