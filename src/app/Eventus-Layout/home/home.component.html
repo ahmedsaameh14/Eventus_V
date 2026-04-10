@@ -1,1 +1,28 @@
-<p>home works!</p>
+<section class="hero-section">
+  <!-- Background Image -->
+  <div class="hero-background">
+    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Eventus V Hero Background" class="hero-image" />
+    <div class="hero-overlay"></div>
+  </div>
+
+  <!-- Hero Content -->
+  <div class="hero-content">
+    <h1 class="hero-title">
+      <span class="hero-title-text">EVENTUS</span>
+      <span class="hero-title-letter">V</span>
+    </h1>
+  </div>
+
+  <!-- Social Media Sidebar -->
+  <div class="social-sidebar">
+    <a *ngFor="let link of socialLinks; let i = index"
+       [href]="link.url"
+       target="_blank"
+       rel="noopener noreferrer"
+       [attr.aria-label]="link.name"
+       class="social-link"
+       [style.animation-delay.ms]="i * 200">
+      <i [class]="'bi bi-' + link.icon"></i>
+    </a>
+  </div>
+</section>
